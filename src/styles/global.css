@@ -1,0 +1,11 @@
+:root {
+  --sl-color-accent-low: #132d59;
+  --sl-color-accent: #60a5fa;
+  --sl-color-accent-high: #b7d6ff;
+  --sl-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body {
+  background: #0b1020;
+}

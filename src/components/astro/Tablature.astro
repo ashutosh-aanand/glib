@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  tab: string;
+}
+
+const { title, tab } = Astro.props;
+const tabId = `tab-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+---
+
+<div class="my-6" aria-labelledby={tabId}>
+  <p id={tabId} class="mb-2 text-sm font-semibold text-slate-200">{title}</p>
+  <div class="overflow-x-auto rounded-lg border border-slate-700 bg-slate-950 p-4" role="region" aria-label={`${title} tablature`}>
+    <pre class="font-tab text-sm leading-relaxed text-slate-100"><code>{tab}</code></pre>
+  </div>
+</div>
